@@ -3,12 +3,36 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3.2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4rem;
     margin: 50px;   
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 10vh;
+    gap: 20px;
+}
+
+
+.board-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 .board {
@@ -17,12 +41,88 @@ h1 {
     border: 2px solid black;
     width: 300px; 
     height: 300px;
-    margin: 20px;
+    margin: 40px;
 }
 
 .board-field {
-    font-size: 1.5rem;
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
     background-color: rgb(255,255,255);
     border: 2px solid black;
+    cursor: pointer;
+}
+
+.board-field:disabled {
+    cursor: not-allowed;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 20px;
+}
+
+.info:disabled {
+    cursor: not-allowed;
+}
+
+.info * {
+    margin: 10px;
+}
+
+#result {
+    font-size: 1.5rem;
+    margin: 10px;
+}
+
+.player-name {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    font-style: italic;
+    margin: 20px;
+}
+
+.player-score {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#player1-name {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#player2-name {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#player1-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#player2-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-btn {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    cursor: pointer;
+}
+
+#reset-btn {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
     cursor: pointer;
 }

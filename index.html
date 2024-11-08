@@ -4,21 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="tictactoe.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Tic Tac Toe</h1>
-    <div class="board">
-        <button class="board-field" data-index="0"></button>
-        <button class="board-field" data-index="1"></button>
-        <button class="board-field" data-index="2"></button>
-        <button class="board-field" data-index="3"></button>
-        <button class="board-field" data-index="4"></button>
-        <button class="board-field" data-index="5"></button>
-        <button class="board-field" data-index="6"></button>
-        <button class="board-field" data-index="7"></button>
-        <button class="board-field" data-index="8"></button>
-    </div>    
-    <script src="tictactoe.js"></script>
+    <div class="game-container">
+        <div id="player1-stats">
+            <div class="player-name" id="player1-game-name">Player 1</div>
+            <div class="player-score" id="player1-score">0</div>
+        </div>
+        <div class="board-wrapper">
+            <div class="board">
+                <button class="board-field" data-index="0"></button>
+                <button class="board-field" data-index="1"></button>
+                <button class="board-field" data-index="2"></button>
+                <button class="board-field" data-index="3"></button>
+                <button class="board-field" data-index="4"></button>
+                <button class="board-field" data-index="5"></button>
+                <button class="board-field" data-index="6"></button>
+                <button class="board-field" data-index="7"></button>
+                <button class="board-field" data-index="8"></button>
+            </div>
+        </div>
+        <div id="player2-stats">
+            <div class="player-name" id="player2-game-name">Player 2</div>
+            <div class="player-score" id="player2-score">0</div>
+        </div>
+    </div>
+    <div class="info">
+        <input type="text" id="player1-name" placeholder="Player 1" />
+        <input type="text" id="player2-name" placeholder="Player 2"/>
+        <button id="start-btn">New Game</button>
+        <button id="reset-btn">Reset</button>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
